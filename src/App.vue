@@ -1,11 +1,11 @@
 <template>
-  <div>
-    <HeaderApp />
-    <MainApp />
-  </div>
+  <HeaderApp />
+  <MainApp />
+  <CardMainApp />
 </template>
 
 <script>
+import CardMainApp from './components/CardMainApp.vue';
 import HeaderApp from './components/HeaderApp.vue';
 import MainApp from './components/MainApp.vue';
 import { store } from './data/store.js';
@@ -19,8 +19,7 @@ export default {
   components: {
     HeaderApp,
     MainApp,
-
-
+    CardMainApp
   },
   data() {
 
