@@ -8,6 +8,8 @@
 <script>
 import HeaderApp from './components/HeaderApp.vue';
 import MainApp from './components/MainApp.vue'
+import { store } from './data/store.js';
+import axios from 'axios'
 
 export default {
   name: 'App',
@@ -16,8 +18,33 @@ export default {
     HeaderApp,
     MainApp
 
+  },
+  data() {
+
+    return {
+      store
+    }
+
+  },
+
+  methods: {
+    getCards() {
+      axios.get(store.apiUrl).then((res) => {
+        console.log(res)
+        console.log(res.data.data)
+
+      })
+
+    }
+
+  },
+
+  created() {
+    this.getCards();
   }
+
 }
 </script>
 
 <style lang="scss" scoped></style>
+{{}}
