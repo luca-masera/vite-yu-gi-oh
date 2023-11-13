@@ -11,12 +11,15 @@ import MainApp from './components/MainApp.vue';
 import { store } from './data/store.js';
 import axios from 'axios'
 
+
+
 export default {
   name: 'App',
 
   components: {
     HeaderApp,
-    MainApp
+    MainApp,
+
 
   },
   data() {
