@@ -1,12 +1,22 @@
 <template>
     <div>
-
+        <CardMainApp v-for="" />
     </div>
 </template>
 
 <script>
+import { store } from '../data/store.js';
 export default {
-    name: 'MainApp'
+    name: 'MainApp',
+    data() {
+
+        return {
+            store
+        }
+    }
+
+
+
 }
 </script>
 

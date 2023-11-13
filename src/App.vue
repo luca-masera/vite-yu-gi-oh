@@ -7,7 +7,7 @@
 
 <script>
 import HeaderApp from './components/HeaderApp.vue';
-import MainApp from './components/MainApp.vue'
+import MainApp from './components/MainApp.vue';
 import { store } from './data/store.js';
 import axios from 'axios'
 
@@ -32,6 +32,8 @@ export default {
       axios.get(store.apiUrl).then((res) => {
         console.log(res)
         console.log(res.data.data)
+        this.store.cards.push(res.data.data)
+        console.log(store.cards)
 
       })
 
