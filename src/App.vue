@@ -1,6 +1,9 @@
 <template>
   <HeaderApp />
-  <MainApp />
+  <div class="container  d-flex flex-wrap ">
+    <MainApp />
+  </div>
+
   <CardMainApp />
 </template>
 
@@ -34,7 +37,7 @@ export default {
       axios.get(store.apiUrl).then((res) => {
         console.log(res)
         console.log(res.data.data)
-        store.cards = res.data.data
+        store.cards = (res.data.data)
         console.log(store.cards)
 
 
@@ -51,5 +54,5 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="css" scoped></style>
 {{}}
