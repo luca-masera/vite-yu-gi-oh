@@ -32,7 +32,13 @@ export default {
   data() {
 
     return {
-      store
+      store,
+
+      params: {
+        num: 20,
+        offset: 0,
+      }
+
     }
 
   },
@@ -41,10 +47,21 @@ export default {
 
     viewName(resp) {
       console.log(resp)
+
+      if (resp != '') {
+
+        this.params = {
+          num: 20,
+          offset: 0,
+          archetype: resp
+        }
+      }
+      this.getCards()
+
     },
 
     getCards() {
-      axios.get(store.apiUrl, { params: { name: '' } }).then((res) => {
+      axios.get(store.apiUrl, { params: this.params }).then((res) => {
         console.log(res)
         console.log(res.data.data)
         store.cards = (res.data.data)
