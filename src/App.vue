@@ -44,7 +44,7 @@ export default {
     },
 
     getCards() {
-      axios.get(store.apiUrl).then((res) => {
+      axios.get(store.apiUrl, { params: { name: '' } }).then((res) => {
         console.log(res)
         console.log(res.data.data)
         store.cards = (res.data.data)
