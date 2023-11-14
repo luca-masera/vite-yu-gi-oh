@@ -1,5 +1,6 @@
 <template>
   <HeaderApp />
+  <AppSearch />
   <div class="container  d-flex flex-wrap ">
     <MainApp />
   </div>
@@ -13,6 +14,8 @@ import HeaderApp from './components/HeaderApp.vue';
 import MainApp from './components/MainApp.vue';
 import { store } from './data/store.js';
 import axios from 'axios'
+import AppSearch from './components/AppSearch.vue';
+
 
 
 
@@ -22,7 +25,9 @@ export default {
   components: {
     HeaderApp,
     MainApp,
-    CardMainApp
+    CardMainApp,
+    AppSearch
+
   },
   data() {
 

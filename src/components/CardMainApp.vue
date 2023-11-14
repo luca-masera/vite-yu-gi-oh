@@ -1,10 +1,9 @@
 <template>
-    <div>
+    <div class="d-flex flex-column align-items-center m-3 box ">
+
         <img :src="images" :alt="name">
-        <h3>{{ name }}</h3>
-        <h6>{{ archetype }}</h6>
-
-
+        <h5>{{ name }}</h5>
+        <h5>{{ archetype }}</h5>
 
     </div>
 </template>
@@ -15,12 +14,14 @@ export default {
     name: 'CardMainApp',
 
 
-    props: {
-        name: String,
-        archetype: String,
-        images: String,
+    props: [
+        'name',
+        'archetype',
+        'images'
 
-    },
+    ]
+
+    ,
     data() {
 
         return {
@@ -32,4 +33,15 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="css" scoped>
+img {
+    width: 150px;
+}
+
+.box {
+    height: 300px;
+    width: 250px;
+    background-color: aqua;
+
+}
+</style>

@@ -1,7 +1,6 @@
 <template>
-    <div>
-        <CardMainApp v-for="card in store.cards" :name="card.name" :archetype="card.archetype" :images="card.card_images" />
-
+    <div class=" bg-danger " v-for="(card, index) in store.cards">
+        <CardMainApp :name="card.name" :archetype="card.archetype" :images="card.card_images[0].image_url" />
 
 
     </div>
