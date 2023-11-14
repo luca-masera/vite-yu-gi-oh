@@ -1,12 +1,12 @@
 <template>
     <div>
-        <select name="appsearch" id="appsearch">
+        <select name="appsearch" id="appsearch" v-model="text" @change="$emit('searchName', text)">
             <option value="">All</option>
-            <option value="name">Book of</option>
-            <option value="name">Deskbot</option>
-            <option value="name">Evolsaur</option>
-            <option value="name">Gadget</option>
-            <option value="name">Charmer</option>
+            <option value="Book of">Book of</option>
+            <option value="Deskbot">Deskbot</option>
+            <option value="Evolsaur">Evolsaur</option>
+            <option value="Gadget">Gadget</option>
+            <option value="Charmer">Charmer</option>
         </select>
 
     </div>
@@ -14,7 +14,14 @@
 
 <script>
 export default {
-    name: 'AppSearch'
+    name: 'AppSearch',
+    data() {
+
+        return {
+            text: ''
+        }
+    }
+
 }
 </script>
 

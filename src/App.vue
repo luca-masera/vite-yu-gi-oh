@@ -1,6 +1,6 @@
 <template>
   <HeaderApp />
-  <AppSearch />
+  <AppSearch @search-name="viewName" />
   <div class="container  d-flex flex-wrap ">
     <MainApp />
   </div>
@@ -38,6 +38,11 @@ export default {
   },
 
   methods: {
+
+    viewName(resp) {
+      console.log(resp)
+    },
+
     getCards() {
       axios.get(store.apiUrl).then((res) => {
         console.log(res)
