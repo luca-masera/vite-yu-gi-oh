@@ -34,8 +34,9 @@ export default {
       axios.get(store.apiUrl).then((res) => {
         console.log(res)
         console.log(res.data.data)
-        this.store.cards.push(res.data.data)
+        store.cards = res.data.data
         console.log(store.cards)
+
 
       })
 

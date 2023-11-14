@@ -1,22 +1,31 @@
 <template>
     <div>
-        <img :src="image" :alt="name">
+        <img :src="images" :alt="name">
         <h3>{{ name }}</h3>
-        <h6>{{ archeotype }}</h6>
+        <h6>{{ archetype }}</h6>
+
+
 
     </div>
 </template>
 
 <script>
-
+import { store } from '../data/store.js';
 export default {
     name: 'CardMainApp',
 
 
     props: {
         name: String,
-        archeotype: String,
-        image: String
+        archetype: String,
+        images: String,
+
+    },
+    data() {
+
+        return {
+            store
+        }
     }
 
 
